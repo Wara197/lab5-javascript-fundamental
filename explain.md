@@ -98,6 +98,12 @@ Full name: John Doe
 
 ### อธิบายการทำงานของโค้ด
 
+- ฟังก์ชัน createUser() คืนค่า object ที่มี property และ method
+- ใช้ shorthand property เช่น firstName แทน firstName: firstName
+- สร้าง email โดยใช้ template string และ .toLowerCase()
+- มี method getFullName() และ getAge() สำหรับคืนชื่อเต็มและอายุ
+- เมื่อเรียก createUser("John","Doe",30) จะได้ object พร้อมข้อมูลครบ
+
 ---
 
 ## ลิงก์ไปยังไฟล์บน GitHub
@@ -143,6 +149,12 @@ Squared: [ 1, 4, 9, 16, 25 ]
 
 ### อธิบายการทำงานของโค้ด
 
+- ฟังก์ชัน processArray(arr, callback) รับ array และฟังก์ชัน callback
+- วนลูปแต่ละค่าใน arr แล้วใช้ callback(item) เพื่อแปลงค่า
+- เก็บค่าที่แปลงแล้วลงใน result และคืนค่าออกมา
+- ตัวอย่าง: (x) => x \* 2 → คืน array ที่ทุกตัวถูกคูณ 2
+- (x) => x \* x → คืน array ที่ทุกตัวถูกยกกำลังสอง
+
 ---
 
 ## ลิงก์ไปยังไฟล์บน GitHub
@@ -178,6 +190,10 @@ User profile: undefined
 ```
 
 ### อธิบายการทำงานของโค้ด
+
+- ใช้ admin?.name → ป้องกัน error ถ้า admin เป็น null → คืนค่า undefined
+- ใช้ || เลือกค่าที่มีจริงตัวแรก → ได้ user.name = "John"
+- ใช้ user && user.profile → ถ้า user มีค่า → คืนค่า user.profile แต่ในที่นี้ไม่มี → undefined
 
 ---
 
@@ -258,6 +274,12 @@ Invalid user: {
 
 ### อธิบายการทำงานของโค้ด
 
+- ฟังก์ชัน validateRegistration(formData) ตรวจสอบข้อมูลฟอร์มทีละเงื่อนไข
+- ถ้าไม่ผ่าน → push ข้อความ error ลงใน array
+- คืนค่า object { isValid, errors }
+- ตัวอย่าง: validUser ผ่านทุกเงื่อนไข → isValid: true
+- invalidUser ไม่ผ่านหลายเงื่อนไข → คืนค่า isValid: false พร้อมรายการ error
+
 ---
 
 ## ลิงก์ไปยังไฟล์บน GitHub
@@ -295,6 +317,12 @@ Average: 30
 ```
 
 ### อธิบายการทำงานของโค้ด
+
+- ใช้ filter เลือกเฉพาะเลขคู่จาก array → [2,4,6,8,10]
+- ใช้ map ยกกำลังสองและแปลงเป็น string เช่น "2²=4"
+- ใช้ join(", ") รวมเป็น string เดียว
+- ใช้ reduce รวมค่าทั้งหมดใน array [10,20,30,40,50] → 150
+- หารด้วยจำนวนสมาชิก (5) → ค่าเฉลี่ย = 30
 
 ---
 
@@ -361,6 +389,13 @@ Bob: 75 (C)
 ```
 
 ### อธิบายการทำงานของโค้ด
+
+- ใช้ map ดึงชื่อ → "Alice, Bob, Charlie, Diana, Eve"
+- ใช้ filter เลือกนักเรียนที่คะแนน ≥ 85 → "Alice, Charlie, Diana, Eve"
+- ใช้ reduce รวมคะแนนทั้งหมด → 435 / 5 = 87.00
+- ใช้ reduce หาคนที่คะแนนสูงสุด → "Alice (95)"
+- ใช้ map + เงื่อนไข → กำหนด grade (A,B,C) ตามคะแนน
+- ใช้ sort เรียงจากคะแนนมากไปน้อย → แสดงผลสรุปเรียงลำดับ
 
 ---
 
@@ -497,6 +532,13 @@ FINAL SCORE: 1/2 (50.0%)s
 ```
 
 ### อธิบายการทำงานของโค้ด
+
+- สร้าง array quizzes เก็บคำถาม ตัวเลือก และคำตอบที่ถูกต้อง
+- ใช้ forEach วนลูปแต่ละ quiz → สุ่มคำตอบด้วย Math.random()
+- เก็บผลลัพธ์ใน array results พร้อมสถานะถูก/ผิด
+- ใช้ filter นับจำนวนคำตอบที่ถูกต้อง → คำนวณคะแนนเป็น %
+- ใช้เงื่อนไข if → กำหนด grade (A–F) และ feedback ตามคะแนน
+- แสดงสถิติ เช่น จำนวนข้อ, ถูก, ผิด, success rate
 
 ---
 
