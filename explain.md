@@ -8,7 +8,7 @@
 
 ## ผลลัพธ์ที่ได้จากการรันโค้ด
 
-เมื่อรันไฟล์ `01-variables.js` ส่วน Challenge 6 จะได้ผลลัพธ์ดังนี้:
+เมื่อรันไฟล์ `01-variables.js` จะได้ผลลัพธ์ดังนี้:
 
 ```javascript
 console.log("\n=== Challenge: Person Object ===");
@@ -36,43 +36,15 @@ console.log("Courses:", student.courses.join(", "));
 
 ---
 
-### ผลลัพธ์ที่ได้จากรัน
+### ผลลัพธ์
 
 ```
-{ firstName: 'Alice', lastName: 'Smith', age: 20, gpa: 3.8, ... }
 Full name: Alice Smith
 Info: Alice Smith, Age: 20, GPA: 3.8
 Courses: HTML, CSS, JavaScript
 ```
 
 ### อธิบายการทำงานของโค้ด
-
-1. **สร้าง Object `student`**
-
-   - มี property เช่น `firstName`, `lastName`, `age`, `gpa`, `courses`, และ `isActive`
-   - มี method (function ภายใน object) คือ:
-     - `getFullName()` → คืนค่าเป็นชื่อเต็ม โดยใช้ `this.firstName` และ `this.lastName`
-     - `getInfo()` → คืนค่าเป็นข้อความรวมชื่อเต็ม, อายุ และ GPA
-
-2. **คำสั่ง `console.log("\n=== Challenge: Person Object ===");`**
-
-   - แสดงหัวข้อเพื่อบอกว่ากำลังเข้าสู่ Challenge 6
-
-3. **คำสั่ง `console.log("Student object:"); console.log(student);`**
-
-   - แสดงข้อความ "Student object:"
-   - ตามด้วยการพิมพ์ทั้ง object `student` ออกมา ทำให้เห็นทั้ง property และ method
-
-4. **คำสั่ง `console.log("Full name:", student.getFullName());`**
-
-   - เรียกใช้ method `getFullName()` → คืนค่า `"Alice Smith"`
-
-5. **คำสั่ง `console.log("Info:", student.getInfo());`**
-
-   - เรียกใช้ method `getInfo()` → คืนค่า `"Alice Smith, Age: 20, GPA: 3.8"`
-
-6. **คำสั่ง `console.log("Courses:", student.courses.join(", "));`**
-   - ใช้ `.join(", ")` รวม array `["HTML", "CSS", "JavaScript"]` เป็น string `"HTML, CSS, JavaScript"`
 
 ---
 
@@ -86,3 +58,77 @@ Courses: HTML, CSS, JavaScript
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
 [01-variables.js - Challenge 6](./01-variables.js)
+
+---
+
+# Explain: 02-functions.js - Challenge 8: Returning Objects
+
+## ผลลัพธ์ที่ได้จากการรันโค้ด
+
+เมื่อรันไฟล์ `02-functions.js` จะได้ผลลัพธ์ดังนี้:
+
+```javascript
+function createUser(firstName, lastName, age) {
+  return {
+    firstName,
+    lastName,
+    age,
+    email: `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.com`,
+    getFullName() {
+      return `${this.firstName} ${this.lastName}`;
+    },
+    getAge() {
+      return this.age;
+    },
+  };
+}
+
+console.log("\nReturning Objects:");
+const newUser = createUser("John", "Doe", 30);
+console.log(newUser);
+console.log("Email:", newUser.email);
+console.log("Full name:", newUser.getFullName());
+```
+
+### ผลลัพธ์
+
+```
+Email: john.doe@example.com
+Full name: John Doe
+
+```
+
+# Explain: 02-functions.js - Challenge 9: Function as Parameter (Callback)
+
+## ผลลัพธ์ที่ได้จากการรันโค้ด
+
+เมื่อรันไฟล์ `02-functions.js` จะได้ผลลัพธ์ดังนี้:
+
+```javascript
+function processArray(arr, callback) {
+  const result = [];
+  for (const item of arr) {
+    result.push(callback(item));
+  }
+  return result;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = processArray(numbers, (x) => x * 2);
+const squared = processArray(numbers, (x) => x * x);
+
+console.log("\nCallback Function:");
+console.log("Original:", numbers);
+console.log("Doubled:", doubled);
+console.log("Squared:", squared);
+```
+
+### ผลลัพธ์
+
+```
+Callback Function:
+Original: [ 1, 2, 3, 4, 5 ]
+Doubled: [ 2, 4, 6, 8, 10 ]
+Squared: [ 1, 4, 9, 16, 25 ]
+
+```
