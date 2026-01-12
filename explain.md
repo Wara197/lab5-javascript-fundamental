@@ -36,15 +36,15 @@ console.log("Courses:", student.courses.join(", "));
 
 ---
 
-=== Challenge: Person Object ===
+### ผลลัพธ์ที่ได้จากรัน
+
 Student object:
 { firstName: 'Alice', lastName: 'Smith', age: 20, gpa: 3.8, ... }
 Full name: Alice Smith
 Info: Alice Smith, Age: 20, GPA: 3.8
 Courses: HTML, CSS, JavaScript
 
-```
-## อธิบายการทำงานของโค้ด
+### อธิบายการทำงานของโค้ด
 
 1. **สร้าง Object `student`**
 
@@ -85,4 +85,3 @@ Courses: HTML, CSS, JavaScript
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
 [01-variables.js - Challenge 6](./01-variables.js)
-```
