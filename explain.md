@@ -10,6 +10,7 @@
 
 เมื่อรันไฟล์ `01-variables.js` ส่วน Challenge 6 จะได้ผลลัพธ์ดังนี้:
 
+```js
 console.log("\n=== Challenge: Person Object ===");
 const student = {
 firstName: "Alice",
@@ -18,7 +19,7 @@ age: 20,
 gpa: 3.8,
 courses: ["HTML", "CSS", "JavaScript"],
 isActive: true,
-// Method (function in object)
+
 getFullName: function () {
 return `${this.firstName} ${this.lastName}`;
 },
@@ -73,5 +74,6 @@ console.log("Courses:", student.courses.join(", "));
 
 ## ลิงก์ไปยังไฟล์บน GitHub
 
-คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:  
+คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
 [01-variables.js - Challenge 6](./01-variables.js)
+```
