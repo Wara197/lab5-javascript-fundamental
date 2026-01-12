@@ -13,26 +13,26 @@
 ```javascript
 console.log("\n=== Challenge: Person Object ===");
 const student = {
-firstName: "Alice",
-lastName: "Smith",
-age: 20,
-gpa: 3.8,
-courses: ["HTML", "CSS", "JavaScript"],
-isActive: true,
+  firstName: "Alice",
+  lastName: "Smith",
+  age: 20,
+  gpa: 3.8,
+  courses: ["HTML", "CSS", "JavaScript"],
+  isActive: true,
 
-getFullName: function () {
-return `${this.firstName} ${this.lastName}`;
-},
-getInfo: function () {
-return `${this.getFullName()}, Age: ${this.age}, GPA: ${this.gpa}`;
-},
+  getFullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  getInfo: function () {
+    return `${this.getFullName()}, Age: ${this.age}, GPA: ${this.gpa}`;
+  },
 };
 console.log("Student object:");
 console.log(student);
 console.log("Full name:", student.getFullName());
 console.log("Info:", student.getInfo());
 console.log("Courses:", student.courses.join(", "));
-
+```
 
 ---
 
@@ -43,7 +43,7 @@ Full name: Alice Smith
 Info: Alice Smith, Age: 20, GPA: 3.8
 Courses: HTML, CSS, JavaScript
 
----
+```
 ## อธิบายการทำงานของโค้ด
 
 1. **สร้าง Object `student`**
