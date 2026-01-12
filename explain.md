@@ -46,6 +46,11 @@ Courses: HTML, CSS, JavaScript
 
 ### อธิบายการทำงานของโค้ด
 
+- สร้าง object student ที่มี property เช่น firstName, lastName, age, gpa, courses, isActive
+- มี method getFullName() คืนชื่อเต็ม และ getInfo() คืนข้อมูลรวมชื่อ อายุ GPA
+- ใช้ console.log(student) แสดงทั้ง object
+- ใช้ student.courses.join(", ") รวม array เป็น string
+
 ---
 
 ## ลิงก์ไปยังไฟล์บน GitHub
@@ -98,7 +103,7 @@ Full name: John Doe
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[01-variables.js - Challenge 8](./0-variables.js)
+[02-functions.js - Challenge 8](./02-functions.js)
 
 ---
 
@@ -143,7 +148,7 @@ Squared: [ 1, 4, 9, 16, 25 ]
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[02-variables.js - Challenge 9](./02-variables.js)
+[02-functions.js - Challenge 9](./02-functions.js)
 
 ---
 
@@ -179,7 +184,7 @@ User profile: undefined
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[03-variables.js - Challenge 5](./03-variables.js)
+[03-control-flow.js - Challenge 5](./03-control-flow.js)
 
 ---
 
@@ -258,7 +263,7 @@ Invalid user: {
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[03-variables.js - Challenge 7](./03-variables.js)
+[03-control-flow.js - Challenge 7](./03-control-flow.js)
 
 ---
 
@@ -296,7 +301,7 @@ Average: 30
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[04-variables.js - Challenge 9](./04-variables.js)
+[04-loops.js - Challenge 9](./04-loops.js)
 
 ---
 
@@ -362,7 +367,7 @@ Bob: 75 (C)
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[04-variables.js - Challenge 10](./04-variables.js)
+[04-loops.js - Challenge 10](./04-loops.js)
 
 ---
 
@@ -488,7 +493,7 @@ Q2: What is the capital of Thailand?
 Your answer: Bangkok
 CORRECT
 
-FINAL SCORE: 1/2 (50.0%)
+FINAL SCORE: 1/2 (50.0%)s
 ```
 
 ### อธิบายการทำงานของโค้ด
@@ -498,6 +503,6 @@ FINAL SCORE: 1/2 (50.0%)
 ## ลิงก์ไปยังไฟล์บน GitHub
 
 คุณสามารถคลิกเพื่อดูไฟล์ต้นฉบับได้ที่นี่:
-[05-variables.js - Activity 5 ](./05-variables.js)
+[05-integration.js - Activity 5 ](./05-integration.js)
 
 ---
