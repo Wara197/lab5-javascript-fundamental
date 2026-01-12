@@ -38,11 +38,12 @@ console.log("Courses:", student.courses.join(", "));
 
 ### ผลลัพธ์ที่ได้จากรัน
 
-Student object:
+```
 { firstName: 'Alice', lastName: 'Smith', age: 20, gpa: 3.8, ... }
 Full name: Alice Smith
 Info: Alice Smith, Age: 20, GPA: 3.8
 Courses: HTML, CSS, JavaScript
+```
 
 ### อธิบายการทำงานของโค้ด
 
